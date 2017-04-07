@@ -12,13 +12,16 @@ ath10k_core-y += mac.o \
 		 bmi.o \
 		 hw.o
 
-
+ath10k_core-y += spectral.o
 ath10k_core-y += thermal.o
 ath10k_core-y += debugfs_sta.o
 
 obj-m += ath10k_pci.o
 ath10k_pci-y += pci.o \
 		ce.o
+
+ccflags-y += -DCONFIG_ATH10K_DEBUG -DCONFIG_ATH10K_DEBUGFS \
+	-DCONFIG_ATH10K_DFS_CERTIFIED
 
 # for tracing framework to find trace.h
 CFLAGS_trace.o := -I$(src)

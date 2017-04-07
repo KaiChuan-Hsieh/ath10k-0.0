@@ -1,3 +1,9 @@
+export CONFIG_ATH10K=m
+export CONFIG_ATH10K_PCI=m
+export CONFIG_ATH10K_DEBUG=y
+export CONFIG_ATH10K_DEBUGFS=y
+export CONFIG_ATH10K_DFS_CERTIFIED=y
+
 obj-m += ath10k/
 
 obj-m += ath.o
